@@ -68,6 +68,10 @@ var SigninView = React.createClass({
 								"The email and password you entered are not valid."
 						  );
 				} else {
+					// always redirect to root
+					top.location.href = '/'
+					return
+					
 					// Redirect to where we came from or to the default admin path
 					if (Keystone.redirect) {
 						top.location.href = Keystone.redirect;
